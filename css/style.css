@@ -1,0 +1,23 @@
+:root {
+  --black-color: #131313;
+  --red-color: #ff4040;
+  --gray-color: #6f6f6f;
+  --white-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--black-color);
+}
