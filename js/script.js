@@ -10,7 +10,7 @@ if (iconMenu) {
     });
 };
 
-const intrSwiper = new Swiper('.intro__swiper', {
+const introSwiper = new Swiper('.intro__swiper', {
     direction: 'vertical',
     loop: true,
     pagination: {
@@ -34,3 +34,50 @@ const intrSwiper = new Swiper('.intro__swiper', {
     },
     allowTouchMove: false,
 });
+
+const bigSwiper = new Swiper('.big-swiper__box', {
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    // spaceBetween: 25,
+    speed: 800,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    mousewheel: true,
+    allowTouchMove: true,
+    keyboard: {
+        enable:true,
+        onlyInViewport: true,
+        pageDown:true
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
+});
+
+// const bigSwiper = new Swiper('.big-swiper__box', {
+//     direction: 'vertical',
+//     loop: true,
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true
+//     },
+//     keyboard: {
+//         enable:true,
+//         onlyInViewport: true,
+//         pageDown:true
+//     },
+//     autoplay: {
+//         delay: 3000,
+//         disableOnInteraction: false
+//     },
+//     speed: 800,
+//     effect: 'fade',
+//     fadeEffect: {
+//         crossFade: true
+//     },
+// });

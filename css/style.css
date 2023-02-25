@@ -79,6 +79,14 @@ button {
   background-color: var(--red-color);
 }
 
+.title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.18; /* 19/16 */
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
 /* ===Header=== */
 
 .header {
@@ -526,14 +534,6 @@ button {
   padding: 75px 0;
 }
 
-.features__title {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.18; /* 19/16 */
-  text-transform: uppercase;
-  margin-bottom: 40px;
-}
-
 .features__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -543,11 +543,18 @@ button {
 .features__image {
   align-self: center;
   margin: 0 auto;
+  position: relative;
+  padding-top: 70.175439%; /* 400/570 */
+  width: 100%;
 }
 
 .features__image img {
-  max-width: 100%;
-  max-height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .content-features {
@@ -590,6 +597,10 @@ button {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
+  .features__image {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -597,7 +608,7 @@ button {
     row-gap: 22px;
   }
 
-  .features__title {
+  .title {
     margin-bottom: 25px;
   }
 }
@@ -608,3 +619,69 @@ button {
   }
 }
 /* ============== */
+/* ===Big Swiper=== */
+.big-swiper {
+  padding: 75px 0 50px;
+}
+
+.big-swiper__box {
+  position: relative;
+  width: 100%;
+  padding-left: 25px;
+  overflow: hidden;
+}
+
+.big-swiper__image {
+  width: 100%;
+  position: relative;
+  padding-top: 54.96%; /* 632/1150 */
+}
+
+.big-swiper__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.big-swiper__box .swiper-pagination {
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.big-swiper__box .swiper-pagination-bullet {
+  width: 2px;
+  height: 25px;
+  background-color: var(--black-color);
+  opacity: 1;
+  border-radius: 7px;
+}
+
+.big-swiper__box .swiper-pagination-bullet-active {
+  background-color: var(--red-color);
+}
+
+@media (max-width: 1024px) {
+  .big-swiper {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .big-swiper {
+    padding: 30px 0 50px;
+  }
+}
+
+@media (max-width: 520px) {
+  .big-swiper__box {
+    padding-left: 15px;
+  }
+}
+
+/* ================ */
